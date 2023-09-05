@@ -10,7 +10,7 @@
             <form action="<?= base_url('manajemen_matkul/tambah_pengampu') ?>" method="post">
                 <div class="form-group">
                     <select class="form-control" name="matkul_id" id="p_matkul">
-                        <option></option>
+                        <option selected disabled>Pilih Mata Kuliah</option>
                         <?php foreach ($mk as $mk) : ?>
                             <option value="<?= $mk['id_matkul'] ?>"><?= $mk['nama_matkul'] ?></option>
                         <?php endforeach; ?>
@@ -18,7 +18,10 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control" name="dosen_id" id="p_dosen">
-                        <option></option>
+                        <option selected disabled>Pilih Dosen</option>
+                        <?php foreach($dosen as $d)  : ?>
+                            <option value="<?= $d['id_dosen'] ?>"><?= $d['nama_dosen'] ?></option>
+                            <?php endforeach; ?>
                     </select>
                 </div>
 
